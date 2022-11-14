@@ -22,7 +22,7 @@ public class DepartmentDaoJDBC implements DepartmentDAO {
     }
 
     @Override
-    public Department findByI(Integer id) {
+    public Department findById(Integer id) {
         return null;
     }
 
