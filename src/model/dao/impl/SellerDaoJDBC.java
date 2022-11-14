@@ -91,6 +91,20 @@ public class SellerDaoJDBC implements SellerDAO {
     @Override
     public void deleteById(Integer id) {
 
+        PreparedStatement st = null;
+
+        try
+        {
+            st = conn.prepareStatement("DELETE FROM seller WHERE id = ?");
+            st.setInt(1, id);
+            st.executeUpdate();
+
+        }catch (SQLException e ){
+            e.printStackTrace();
+        }
+        finally {
+            DB.closeStatement(st);
+        }
     }
 
     @Override
@@ -143,7 +157,7 @@ public class SellerDaoJDBC implements SellerDAO {
             ps = conn.prepareStatement("SELECT seller.*,department.Name as DepName "
                     + "FROM seller INNER JOIN department "
                     + "ON seller.DepartmentId = department.Id "
-                    + "ORDER BY Name");
+                    + "ORDER BY Id");
             rs = ps.executeQuery();
 
             List<Seller> list = new ArrayList<>();

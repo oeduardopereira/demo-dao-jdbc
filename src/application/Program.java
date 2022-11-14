@@ -49,6 +49,15 @@ public class Program {
         System.out.println("Updated!\n" + seller);
         System.out.println();
 
+        System.out.println("=== TEST 6 Seller: Delete ===");
+        sellerDAO.deleteById(1);
+        System.out.println("Deleted!");
+        System.out.println();
+        sellerDAO.findAll();
+        for ( Seller s : sellerList){
+            System.out.println(s);
+        }
+
         DB.closeConn();
 
     }
