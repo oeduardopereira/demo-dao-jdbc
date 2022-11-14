@@ -23,12 +23,11 @@ public class DepartmentDaoJDBC implements DepartmentDAO {
         try{
 
             st = conn.prepareStatement("INSERT INTO department " +
-                    "(Id, Name) " +
+                    "(Name) " +
                     "VALUES " +
-                    "(?, ?)", Statement.RETURN_GENERATED_KEYS);
+                    "(?)", Statement.RETURN_GENERATED_KEYS);
 
-            st.setInt(1, obj.getId());
-            st.setString(2, obj.getName());
+            st.setString(1, obj.getName());
 
             int rowsAffected = st.executeUpdate();
 
@@ -58,7 +57,7 @@ public class DepartmentDaoJDBC implements DepartmentDAO {
         PreparedStatement st = null;
 
         try{
-            st = conn.prepareStatement("UPDATE department Name = ? WHERE Id = ?");
+            st = conn.prepareStatement("UPDATE department SET Name = ? WHERE Id = ?");
 
             st.setString(1, obj.getName());
             st.setInt(2, obj.getId());
@@ -138,11 +137,12 @@ public class DepartmentDaoJDBC implements DepartmentDAO {
             List<Department> list = new ArrayList<>();
 
             while (rs.next()){
-                Department dep  = new Department(rs.getString("Name"), rs.getInt("Id"));
+                Department dep  = new Department();
+                dep.setName(rs.getString("Name"));
+                dep.setId(rs.getInt("Id"));
                 list.add(dep);
             }
             return list;
-
         }catch (SQLException e ){
             e.printStackTrace();
         }finally {
