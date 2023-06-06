@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -28,15 +28,21 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="62aa2706-e736-4b90-a1b1-7923796ed1ab">
+    <connection id="6f07607c-f690-4280-a75a-1dffe8316aa6">
       <console name="MySQLConnection" type="STANDARD" schema="mysql" session="Main" />
     </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="62aa2706-e736-4b90-a1b1-7923796ed1ab" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="6f07607c-f690-4280-a75a-1dffe8316aa6" dataset="jdbcdatabase.seller" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -67,7 +73,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="62aa2706-e736-4b90-a1b1-7923796ed1ab" active="true" signed="true">
+      <connection id="6f07607c-f690-4280-a75a-1dffe8316aa6" active="true" signed="true">
         <database>
           <name value="MySQLConnection" />
           <description value="" />

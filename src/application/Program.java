@@ -43,14 +43,15 @@ public class Program {
         System.out.println();
 
         System.out.println("=== TEST 5 Seller: Update ===");
-        seller = sellerDAO.findById(1);
+        seller = sellerDAO.findById(32);
+        System.out.println("OLD: " + seller);
         seller.setName("Junin Caicara Magnata");
         sellerDAO.update(seller);
         System.out.println("Updated!\n" + seller);
         System.out.println();
 
         System.out.println("=== TEST 6 Seller: Delete ===");
-        sellerDAO.deleteById(1);
+        sellerDAO.deleteById(33);
         System.out.println("Deleted!");
         System.out.println();
         sellerDAO.findAll();

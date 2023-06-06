@@ -1,0 +1,15 @@
+
+ƒ
+java:S1192v"hDefine a constant instead of duplicating this literal "ON seller.DepartmentId = department.Id " 3 times.(İíÏíùÿÿÿÿ
+‡
+java:S1192t"lDefine a constant instead of duplicating this literal "SELECT seller.*,department.Name as DepName " 3 times.(Ø„õúùÿÿÿÿ
+y
+java:S1192u"cDefine a constant instead of duplicating this literal "FROM seller INNER JOIN department " 3 times.(õ³›ç
+d
+java:S1192”"MDefine a constant instead of duplicating this literal "DepartmentId" 5 times.(¡­
+B
+java:S1168¹"+Return an empty collection instead of null.(¥¹ï
+B
+java:S1168à"+Return an empty collection instead of null.(¥¹ï
+O
+java:S1128"4Remove this unused import 'model.dao.DepartmentDAO'.(„£ïäıÿÿÿÿ
